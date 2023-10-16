@@ -1,0 +1,84 @@
+/* Add application styles & imports to this file! */
+@import '~@ionic/angular/css/ionic.bundle.css';
+
+.titulo {
+  text-align: center;
+}
+
+:root {
+  /* fonte */
+  --ion-font-family: 'Varela Round', sans-serif;
+
+  /* barra superior */
+  --ion-toolbar-background: #2a8c82;
+  --ion-toolbar-color: #9bf2ea;
+
+  --ion-background-color: linear-gradient(180deg, #2a8c82 0%, #41bfb3 100%);
+
+  /* barra inferior */
+  --ion-tab-bar-background: #2a8c82;
+  --ion-tab-bar-color: #275950;
+  --ion-tab-bar-color-selected: #9bf2ea;
+
+  --ion-text-color: white;
+  --ion-text-color-rgb: 255, 255, 255;
+
+  --ion-card-background: linear-gradient(139deg, #9bf2ea 0%, transparent 100%);
+  --ion-item-background: transparent;
+}
+
+.conteudo {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.img-item {
+  padding: 20px;
+  padding-bottom: 0px;
+  width: 100%;
+  max-width: 400px;
+
+  /*animação */
+  animation: Rotacao 4s infinite alternate;
+}
+
+ion-card {
+  border-radius: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+ion-card:hover {
+  transform: scale(1.03);
+}
+
+ion-thumbnail {
+  /*animação */
+  animation: CimaBaixo 4s infinite alternate;
+}
+
+@keyframes CimaBaixo {
+  0% {
+    transform: translate(0px, 5px);
+  }
+
+  100% {
+    transform: translate(0px, -5px);
+  }
+}
+
+@keyframes Rotacao {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(1deg) scale(1.02);
+  }
+
+  100% {
+    transform: rotate(-1deg) scale(1.04);
+  }
+}
